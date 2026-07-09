@@ -4,7 +4,7 @@ function initArrays(){
     console.log(myList);
     
 }
-// 0 auf Bannana ändern
+// 0 auf Banana ändern
 function initArrays(){
 myList[0] = "No Banana";
 
