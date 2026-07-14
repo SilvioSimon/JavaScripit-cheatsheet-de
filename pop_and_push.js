@@ -11,9 +11,8 @@ function containsElement(array, element){
 }
 
 function initArrays(){
-console.log(containsElement(fruits, "Banana"));
+console.log(containsElement(fruits, "Banana")); // case sensitive achten
 }
-
 
 
 
