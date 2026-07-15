@@ -23,4 +23,4 @@ document.getElementById('test_div').classList.add('green_bg');
 
 //Attrubut wert ändern
 document.getElementById('test_input').setAttribute('type', 'text')
-document.getElementById('test_input').setAttribute('value', 1412634671234567890)
+document.getElementById('test_input').setAttribute('value', 1412634671234567890) 
