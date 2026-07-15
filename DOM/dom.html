@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <style>
+      button{
+        margin: 16px;
+      }
+
+      .green_bg{
+        width: 50px;
+        height: 50px;
+        background-color: green;
+      }
+
+      .d_none{
+        display: none;
+      }
+
+    </style>
+
+  </head>
+  <body onload="console.log(7777777)"> <!-- Wird beim Laden der Seite ausgeführt und schreibt 123 in die Konsole -->
+    <h1 id="website_title">Der Titel der Website</h1>
+    <h2 id="website_title2">Subtitle</h2>
+
+        <button onclick="window.location.href='../index.html'">
+        Main Page
+    </button>
+
+    <p id="our_p_tag">Ich bin das 'p' Tag</p>
+    <button onclick="toggleDNone('our_p_tag')">bitte ausführen (07 DOM)</button>
+
+    <input type="text" onkeydown="console.log('keydown')">
+    <input type="text" onkeyup="console.log('keyup')">
+    <input type="text" onfocus="console.log('OLIVER')">
+    <input type="text" onchange="console.log(9)">
+
+
+    <div id="class-demo" class="existing-class">Demo</div>
+    <!-- className liefert alle CSS-Klassen des Elements als String. Ist demo jedoch null (Element nicht gefunden), entsteht ein Fehler. -->
+
+    <div class="green_bg" id="test_div"></div>
+
+    <div id="meineDiv"><!-- leer! für button in JS --> </div>
+
+
+    <input id="test_input" type="number" value="18">
+    <input type="checkbox" checked="true">
+
+
+    <p id="uebung" title="King Jesus">Jesus is the King</p>
+
+
+    <h3>09 – Aufgabe: onkeyup / onkeydown</h3>
+      <input id="meinInput" type="text" onkeyup="logValue()" onkeydown="logValue()" 
+      placeholder="Holy Spirit eingeben...">
+
+
+<!--
+onclick vs. addEventListener()
+
+1. onclick:
+   - Wird direkt im HTML-Element definiert.
+   - Einfach für kleine Übungen.
+   - HTML und JavaScript werden vermischt.
+
+   Beispiel:
+   <button onclick="logger()">Klick mich</button>
+
+2. addEventListener():
+   - Wird im JavaScript definiert.
+   - Trennt HTML (Struktur) und JavaScript (Verhalten).
+   - Mehrere Event-Listener können auf dasselbe Element registriert werden.
+   - Wird in modernen Projekten bevorzugt.
+
+   Beispiel:
+   document.getElementById("our_p_tag")
+           .addEventListener("click", logger);
+
+Ablauf:
+- document.getElementById("our_p_tag")
+  sucht das Element mit der ID "our_p_tag".
+
+- addEventListener("click", ...)
+  wartet auf einen Klick des Benutzers.
+
+- logger
+  ist die Funktion, die beim Klick ausgeführt wird.
+
+Ergebnis:
+Klickt der Benutzer auf das Element, wird logger() aufgerufen.
+-->
+
+    <script src="./DOM.js"></script>
+    <script src="./button_Aufgabe.js"></script>
+    <script src="./dom_manipulation.js"></script>
+    <script src="./Aufgabe_setAttribute.js"></script>
+  </body>
+</html>
