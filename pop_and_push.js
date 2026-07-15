@@ -26,15 +26,3 @@ function initArrays2() {
 
 
 
-// Aufgabenstellung 1: includes
-
-function initArrays3(){
-let name = ['Anna', 'Ben', 'Clara', 'Ben'];
-}
-
-function containsElement(array, element){
-    return array.includes(element);
-}
-
-console.log(containsElement(['Anna', 'Ben', 'Clara'], 'Ben')); // true
-console.log(containsElement(['Anna', 'Ben', 'Clara'], 'Daniel')); // false
