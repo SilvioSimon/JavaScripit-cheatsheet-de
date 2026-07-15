@@ -1,4 +1,4 @@
-// indexOf() gibt den Index des gesuchten Elements zurück. (Position)
+// Aufgabe 2: indexOf() gibt den Index des gesuchten Elements zurück. (Position)
 // Existiert das Element nicht im Array, wird -1 zurückgegeben.
 
 
@@ -19,9 +19,8 @@ console.log(findElementIndex([10, 20, 30, 40], 50)); // -1 (50 ist nicht im Arra
 
 
 
-
-
-// shift() entfernt das erste Element aus einem Array.
+// ====================================================================
+// Aufgabe 3: shift() entfernt das erste Element aus einem Array
 
 function removeFirstElement(array) {
     array.shift(); // Entfernt das erste Element aus dem Array
@@ -30,4 +29,20 @@ function removeFirstElement(array) {
 
 console.log(removeFirstElement([10, 20, 30, 40])); // [20, 30, 40]
 console.log(removeFirstElement(['a', 'b', 'c', 'd'])); // ['b', 'c', 'd']
+
+
+
+
+
+
+// ====================================================================
+// Aufgabe 4: unshift() fügt ein neues Element am Anfang eines Arrays hinzu
+
+function addElementToStart(array, element) {
+    array.unshift(element);
+    return array;
+}
+
+console.log(addElementToStart([2, 3, 4], 1)); // [1, 2, 3, 4]
+console.log(addElementToStart(['b', 'c', 'd'], 'a')); // ['a', 'b', 'c', 'd']
 
