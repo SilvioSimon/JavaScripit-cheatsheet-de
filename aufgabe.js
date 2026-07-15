@@ -14,4 +14,4 @@ function findElementIndex(array, element) {
 }
 
 console.log(findElementIndex([10, 20, 30, 40], 30)); // 2 (30 befindet sich an Index 2)
-console.log(findElementIndex([10, 20, 30, 40], 50)); // -1 (90 ist nicht im Array vorhanden)
+console.log(findElementIndex([10, 20, 30, 40], 50)); // -1 (50 ist nicht im Array vorhanden)
