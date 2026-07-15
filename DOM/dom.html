@@ -20,16 +20,82 @@
         display: none;
       }
 
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
     </style>
 
   </head>
   <body onload="console.log(7777777)"> <!-- Wird beim Laden der Seite ausgeführt und schreibt 123 in die Konsole -->
     <h1 id="website_title">Der Titel der Website</h1>
-    <h2 id="website_title2">Subtitle</h2>
+    <h3 id="website_title2">^Titel website geändert^</h3>
 
         <button onclick="window.location.href='../index.html'">
         Main Page
     </button>
+
+    <p>
+<h4>Lernzweck:</h4>
+getElementById() <br>
+innerHTML<br>
+classList.toggle()<br>
+classList.add()<br>
+classList.remove()<br>
+setAttribute()</p><br>
+
+<p>
+  <strong>JavaScript DOM Lernübersicht</strong><br><br>
+
+  <strong>1. Element auswählen</strong><br>
+  - getElementById() → HTML-Element über ID finden<br>
+  - querySelector() → Element mit CSS-Selektor finden<br>
+  - querySelectorAll() → mehrere Elemente auswählen<br><br>
+
+
+  <strong>2. Inhalt ändern</strong><br>
+  - innerHTML → HTML-Inhalt lesen und verändern<br>
+  - textContent → reinen Text verändern<br><br>
+
+
+  <strong>3. CSS Klassen bearbeiten</strong><br>
+  - classList.add() → CSS-Klasse hinzufügen<br>
+  - classList.remove() → CSS-Klasse entfernen<br>
+  - classList.toggle() → CSS-Klasse ein-/ausschalten<br>
+  - classList.contains() → prüfen, ob Klasse vorhanden ist<br><br>
+
+
+  <strong>4. Attribute bearbeiten</strong><br>
+  - setAttribute() → Attribut ändern oder hinzufügen<br>
+  - getAttribute() → Attribut auslesen<br>
+  - removeAttribute() → Attribut entfernen<br><br>
+
+
+  <strong>5. HTML Elemente erstellen und entfernen</strong><br>
+  - createElement() → neues HTML-Element erstellen<br>
+  - appendChild() → Element hinzufügen<br>
+  - remove() → Element entfernen<br><br>
+
+
+  <strong>6. Events (Benutzeraktionen)</strong><br>
+  - onclick → Klick erkennen<br>
+  - addEventListener() → moderne Event-Verarbeitung<br>
+  - keydown → Taste gedrückt<br>
+  - keyup → Taste losgelassen<br>
+  - focus → Element ausgewählt<br>
+  - change → Wert geändert<br><br>
+
+
+  <strong>7. Formulare</strong><br>
+  - value → Eingabewert auslesen<br>
+  - checked → Checkbox prüfen<br><br>
+
+
+  <strong>8. CSS mit JavaScript verändern</strong><br>
+  - element.style → CSS direkt ändern<br>
+
+</p>
 
     <p id="our_p_tag">Ich bin das 'p' Tag</p>
     <button onclick="toggleDNone('our_p_tag')">bitte ausführen (07 DOM)</button>
