@@ -28,7 +28,7 @@ initArrays();
 
 
 // ==============================
-// ARRAYS
+// ARRAYS 2
 // ==============================
 
 let fruitsX = ["Banana", "Orange", "Apple", "Mango"];
@@ -50,6 +50,28 @@ function initArrays2(){
         contentRef.innerHTML += indexFruitsX + " " + fruitsX[indexFruitsX] + ", " + "<br>";
     }
 }
-
-
 initArrays2();
+
+
+// ==============================
+// ARRAYS 3
+// ==============================
+ // Zweites HTML-Element auswählen.
+// Ausgabe erfolgt in <div id="my_content2"></div>
+
+function initArrays3() {
+    let contentRef = document.getElementById("my_content2");
+    contentRef.innerHTML = "";
+
+    // .length gibt die Anzahl der Elemente im Array zurück.
+    // Die Schleife läuft automatisch genau so oft,
+    // wie Elemente im Array vorhanden sind.
+
+    for (let indexFruits = 0; indexFruits < fruitsX.length; indexFruits++) {
+        contentRef.innerHTML += `<p> DOMI--> ${fruitsX[indexFruits]}</p>`;
+    }
+    // Template Literal:
+    // ${} ersetzt die Variable direkt im Text.
+
+}
+initArrays3();
