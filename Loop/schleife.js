@@ -1,6 +1,6 @@
   //function initArrays(){
    // for (let index = 0; index < array.length; index++) {
-                //  start;    solange;      Schritt
+            //  start;    solange;      Schritt
        // console.log(1);      
    // }
 
@@ -19,8 +19,10 @@ initArrays();
 
 function initArrays2(){
 
-    for (let indexFruitsX = -2; indexFruitsX < 6; indexFruitsX += 2) {
-        console.log(indexFruitsX);
+    let contentRef = document.getElementById("my_contant");
+    contentRef.innerHTML = "";
+    for (let indexFruitsX = -2; indexFruitsX < 7; indexFruitsX ++) {
+        contentRef.innerHTML += " asd";
     }
 }
 initArrays2();
