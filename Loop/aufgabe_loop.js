@@ -74,6 +74,21 @@ printNumbersReverse(3);// Erwartete Ausgabe: 3, 2, 1
 
 
 // ==============================
-// Nur jedes dritte Element ausgeben
+// JEDES DRITTE ELEMENT AUSGEBEN
 // ==============================
+function printEveryThirdElement(arr) {
+    let elements = "";
+    // Start bei Index 0
+    // Nach jedem Durchlauf 3 Positionen weitergehen
 
+    for (let index = 0; index < arr.length; index += 3) {
+        elements += arr[index];
+        if (index + 3 < arr.length) {
+            elements += ", ";
+        }
+    }
+    console.log(elements);
+}
+
+printEveryThirdElement([1, 2, 3, 4, 5, 6, 7, 8, 9]); // Erwartete Ausgabe: 1, 4, 7
+printEveryThirdElement(['a', 'b', 'c', 'd', 'e', 'f']); // Erwartete Ausgabe: 'a', 'd' 
