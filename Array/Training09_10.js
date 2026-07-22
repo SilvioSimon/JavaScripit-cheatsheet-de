@@ -3,16 +3,11 @@
 // ==================================================
 
 
-function initArrays(){
-// let contentRef = document.getElementById('my_content');
-// contentRef.innerHTML = "";
-// for (let indexFruits =0; indexFruits < fruits.length; indexFruits++) {
-// contentRef.innerHTML += *< p>+ ${fruits[indexFruits]}</p>'
-}
+function initArrays() {
+    let refList = document.getElementsByClassName("red_box");
 
-let refList = document.getElementsByClassName('red_box')
-
-for (let index = 0; index < refList.length; index++){
-const singleRef = refList[index];
-singleRef.innerText = index;
+    for (let index = 0; index < refList.length; index++) {
+        const singleRef = refList[index];
+        singleRef.innerText = index;
+    }
 }
