@@ -1,16 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AUFGABE ÜBUNG</title>
-</head>
-<body>
 
-    <button onclick="window.location.href='../index.html'">
-        Main Page
-    </button>
+    <style>
+      .red_box {
+        height: 50px;
+        width: 50px;
+        border: 4px solid black;
+      }
+
+      .green_fill {
+        background-color: rgb(110, 180, 5);
+      }
+    </style>
+  </head>
+  <body onload="initArrays()">
+    <button onclick="window.location.href = '../index.html'">Main Page</button>
+
+    <h1 id="website_title">Arrays und Schleifen</h1>
+
+    <div id="my_content"></div>
+
+    <div class="red_box green_fill"></div>
+    <div class="red_box"></div>
+    <div class="red_box"></div>
+    <div class="red_box"></div>
+
+    <script>
+      function initArrays() {
+        console.log("Seite geladen");
+      }
+    </script>
 
     <script src="./aufgabe.js"></script>
-</body>
+  </body>
 </html>
