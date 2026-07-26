@@ -9,6 +9,8 @@ if (points >= pointsNeeded) {
 }
 //Konsolenausgabe: You need 400 points to get to Level 2
 
+
+
 let isDay = false;
 
 if (isDay) {
@@ -18,8 +20,6 @@ if (isDay) {
 }
 // RESULT = Lights on!
 //Was ist ein "else" Anweisung?: Eine Bedingung, die ausgeführt wird, wenn die Bedingung der if-Anweisung false ist
-
-
 
 
 
@@ -34,3 +34,12 @@ if (hour < 12) {
 } else {
   console.log("Good night");
 } // RESULT = good evening
+
+
+
+let score = 75;
+if (score > 70 && score < 90) {
+  console.log("You passed!");
+} else if (score >= 90) {
+  console.log("You get an A!");
+} //You passed!
