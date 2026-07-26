@@ -1,3 +1,8 @@
+// ==============================
+// LEVEL-FORTSCHRITT PRÜFEN
+// ==============================
+
+//Konsolenausgabe: You need 400 points to get to Level 2
 let points = 7600;
 let pointsNeeded = 8000;
 
@@ -7,10 +12,18 @@ if (points >= pointsNeeded) {
   const left = pointsNeeded - points;
   console.log("You need " + left + " points to get to Level 2");
 }
-//Konsolenausgabe: You need 400 points to get to Level 2
 
 
+// ==============================
+// ELSE-ANWEISUNG
+// ==============================
 
+// Konsolenausgabe:
+// Lights on!
+
+// Erklärung:
+// Die else-Anweisung wird ausgeführt,
+// wenn die Bedingung der if-Anweisung false ist.
 let isDay = false;
 
 if (isDay) {
@@ -18,11 +31,12 @@ if (isDay) {
 } else {
   console.log("Lights on!");
 }
-// RESULT = Lights on!
-//Was ist ein "else" Anweisung?: Eine Bedingung, die ausgeführt wird, wenn die Bedingung der if-Anweisung false ist
 
 
-
+// ==============================
+// ELSE IF-ANWEISUNG
+// ==============================
+// Konsolenausgabe: Good evening
 let hour = 20;
 
 if (hour < 12) {
@@ -33,13 +47,22 @@ if (hour < 12) {
   console.log("Good evening");
 } else {
   console.log("Good night");
-} // RESULT = good evening
+} 
 
 
+// ==============================
+// LOGISCHER UND-OPERATOR (&&)
+// ==============================
+// You passed!
 
+// Erklärung:
+// Der &&-Operator bedeutet "UND".
+// Beide Bedingungen müssen true sein,
+// damit der Codeblock ausgeführt wird.
 let score = 75;
+
 if (score > 70 && score < 90) {
   console.log("You passed!");
 } else if (score >= 90) {
   console.log("You get an A!");
-} //You passed!
+} 
