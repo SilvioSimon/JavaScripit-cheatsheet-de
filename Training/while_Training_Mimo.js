@@ -144,7 +144,7 @@ while (listNumber < 11) {
 
 
 // ==============================
-// While - amerikanische Flagge
+// for schleife - amerikanische Flagge
 // ==============================
 let counter1 = 0;
 while (counter1 < 5) {
@@ -165,7 +165,8 @@ for (let i = 0; i < 4; i++) {
 for (let i = 0; i < 4; i++) {
  console.log("-------------------");
 }
-
+//Mit for-Schleifen können wir dasselbe Programm umschreiben, 
+//sodass es für andere Programmierer leichter zu verstehen ist.
 //resultat:
 
 //  **********---------
