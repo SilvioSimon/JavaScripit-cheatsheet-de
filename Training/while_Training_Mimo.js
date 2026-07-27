@@ -139,3 +139,40 @@ while (listNumber < 11) {
 //8. Camera
 //9. Camera
 //10. Camera
+
+
+
+
+// ==============================
+// While - amerikanische Flagge
+// ==============================
+let counter1 = 0;
+while (counter1 < 5) {
+ console.log("**********---------");
+ counter1++;
+}
+let counter2 = 0;
+while (counter2 < 4) {
+ console.log("-------------------");
+ counter2++;
+}
+
+// Oder noch besser (Gleiche Ergebnis)
+
+for (let i = 0; i < 4; i++) {
+ console.log("**********---------");
+}
+for (let i = 0; i < 4; i++) {
+ console.log("-------------------");
+}
+
+//resultat:
+
+//  **********---------
+//  **********---------
+//  **********---------
+//  **********---------
+//  -------------------
+//  -------------------
+//  -------------------
+//  -------------------
