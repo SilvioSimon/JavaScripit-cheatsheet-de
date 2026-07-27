@@ -85,4 +85,16 @@ while (keepGoing === true) {
 }
 
 
+// Weitere Beispiel Konsole Ausgabe: 
+//keepGoing: true 
+//keepGoing: false
+
+let keepGoing = true;
+while (keepGoing === true) {
+ console.log("keepGoing: " + keepGoing);
+ keepGoing = false;
+ console.log("keepGoing: " + keepGoing);
+}
+
+
 
