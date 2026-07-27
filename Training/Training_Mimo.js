@@ -66,3 +66,23 @@ if (score > 70 && score < 90) {
 } else if (score >= 90) {
   console.log("You get an A!");
 } 
+
+
+
+// ==============================
+// While - Innerhalb des Codeblocks stoppen
+// ==============================
+// Konsolenausgabe: and again
+// Ohne dauer Schleife "and again", 
+//indem wie wir keepGoing auf false setzen, 
+//sodass die Bedingung false zurückgibt.
+
+let keepGoing = true;
+
+while (keepGoing === true) {
+ console.log("and again");
+ keepGoing = false; //--> Hier wird gestoppt
+}
+
+
+
