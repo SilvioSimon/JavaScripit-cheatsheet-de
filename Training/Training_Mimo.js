@@ -98,3 +98,44 @@ while (keepGoing === true) {
 
 
 
+// ==============================
+// While - mit Zählervariable
+// ==============================
+let counter = 1;
+
+while (counter < 5) {
+ console.log(counter);
+ counter++;
+} //Konsolenausgabe
+//1
+//2
+//3
+//4
+
+let counter = 5;
+while (counter < 10) {
+  counter++;
+  console.log(counter);
+}//Konsolenausgabe
+//6
+//7
+//8
+//9
+//10
+
+
+let listNumber = 1;
+while (listNumber < 11) {
+ console.log(listNumber + ". Camera");
+ listNumber++;
+}//Konsolenausgabe
+//1. Camera
+//2. Camera
+//3. Camera
+//4. Camera
+//5. Camera
+//6. Camera
+//7. Camera
+//8. Camera
+//9. Camera
+//10. Camera
