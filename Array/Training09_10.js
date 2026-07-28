@@ -3,7 +3,7 @@
 // ==================================================
 
 
-  let fruits = ["Apfel", "Banane", "Kirsche", "Erdbeere"];
+  let fruits = ["O Apfel", "O Banane", "O Kirsche", "O Erdbeere"];
 
 // function initArrays() {
 //    let refList = document.getElementsByClassName("red_box");
