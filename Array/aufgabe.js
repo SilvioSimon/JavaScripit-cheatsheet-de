@@ -79,8 +79,6 @@ console.log(getSubArray(['a', 'b', 'c', 'd', 'e'], 0, 3)); // ['a', 'b', 'c']
 
 
 
-
-
 // ====================================================================
 // Aufgabe 6: 
 // join() verbindet alle Elemente eines Arrays zu einem String.
