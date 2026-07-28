@@ -4,10 +4,33 @@ function greetUser() {
 }
 
 greetUser();
-//Konsolenausgabe: Good morning Anna 
+//Konsolenausgabe: Good morning Anna
 //                 Welcome back
 
+function greetRon() {
+  const name = "Robin Hood";
+  console.log("Hello, " + name);
+}
 
+greetRon();
+//Konsolenausgabe: Hello, Robin Hood
 
+function greet(name) {
+  console.log("Hello, " + name);
+}
+greet("MAMA");
+//Konsolenausgabe: Hello, MAMA
 
+function doubleNumber(number) {
+  const result = number * 2;
+  console.log(result);
+}
+doubleNumber(5);
+//Konsolenausgabe: 10
 
+function displayHalf(number) {
+  const half = number / 2;
+  console.log(half);
+}
+displayHalf(10);
+//Konsolenausgabe: 5
