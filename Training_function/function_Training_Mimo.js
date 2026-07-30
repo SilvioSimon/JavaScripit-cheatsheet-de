@@ -49,6 +49,44 @@ displayHalf(10);
 //Konsolenausgabe: 5
 
 // ==============================
+// Zahl + Euro Angeben 
+// ==============================
+function displayCash() {
+  const money = 12030;
+  const currency = " Euros";
+  console.log(money + currency);
+}
+displayCash();
+// Konsolenausgabe: 12030 Euros
+
+
+// ==============================
+// Funktion mit mehrere Parameter
+// ==============================
+function display(firstName, lastName) {
+  console.log(firstName + " " + lastName);
+}
+display("John", "Morgan");
+// Konsolenausgabe: John Morgan
+
+
+// ==============================
+// ARRAY AN FUNKTION ÜBERGEBEN
+// ==============================
+// Diese Funktion erhält ein Array als Parameter.
+// Mit den Indexwerten [0] und [1] werden
+// der Benutzername und die Benutzer-ID
+// aus dem Array ausgelesen und ausgegeben.
+function displayUserID(user) {
+  console.log(user[0], user[1]);
+}
+
+const user = ["Don Quixote", 992];
+displayUserID(user);
+// Konsolenausgabe:Don Quixote 992
+
+
+// ==============================
 // Funktion mit "return"
 // ==============================
 // Um etwas aus einer Funktion zurückzugeben,
@@ -59,6 +97,7 @@ function userAge(number) {
 }
 console.log(userAge(26));
 //Konsolenausgabe: User age: 26
+
 
 // ==============================
 // FUNKTION MIT PARAMETER UND RETURN
@@ -106,12 +145,3 @@ function addTen(number) {
 console.log(addTen(20));
 // Konsolenausgabe: 30
 // 10 + 20 = 30
-
-
-function displayCash() {
-  const money = 12030;
-  const currency = " Euros";
-  console.log(money + currency);
-}
-displayCash();
-// Konsolenausgabe: 12030 Euros
