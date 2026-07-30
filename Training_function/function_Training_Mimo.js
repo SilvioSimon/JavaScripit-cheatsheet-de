@@ -9,8 +9,6 @@ greetUser();
 //Konsolenausgabe: Good morning Anna
 //                 Welcome back
 
-
-
 // ==============================
 // FUNKTION MIT LOKALER VARIABLE
 // ==============================
@@ -21,8 +19,6 @@ function greetRon() {
 greetRon();
 //Konsolenausgabe: Hello, Robin Hood
 
-
-
 // ==============================
 // FUNKTION MIT PARAMETER
 // ==============================
@@ -31,8 +27,6 @@ function greet(name) {
 }
 greet("MAMA");
 //Konsolenausgabe: Hello, MAMA
-
-
 
 // ==============================
 // ZAHL VERDOPPELN
@@ -44,8 +38,6 @@ function doubleNumber(number) {
 doubleNumber(5);
 //Konsolenausgabe: 10
 
-
-
 // ==============================
 // HÄLFTE EINER ZAHL BERECHNEN
 // ==============================
@@ -55,3 +47,15 @@ function displayHalf(number) {
 }
 displayHalf(10);
 //Konsolenausgabe: 5
+
+
+// ==============================
+// Funktion mit "return"
+// ==============================
+// Um etwas aus einer Funktion zurückzugeben,
+// fügen wir das return-Schlüsselwort
+function userAge(number) {
+  const age = "User age: " + number;
+  return age;
+}
+console.log(userAge(26));
