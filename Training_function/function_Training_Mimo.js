@@ -48,7 +48,6 @@ function displayHalf(number) {
 displayHalf(10);
 //Konsolenausgabe: 5
 
-
 // ==============================
 // Funktion mit "return"
 // ==============================
@@ -59,3 +58,60 @@ function userAge(number) {
   return age;
 }
 console.log(userAge(26));
+//Konsolenausgabe: User age: 26
+
+// ==============================
+// FUNKTION MIT PARAMETER UND RETURN
+// ==============================
+//Wir können den Rückgabewert auch in einer
+//Variable speichern.
+function userAge(number) {
+  const age = "User age: " + number;
+  return age;
+}
+const result = userAge(39);
+console.log(result);
+//Konsolenausgabe: User age: 39
+
+//Wenn wir keine return-Anweisung einfügen,
+//gibt die Funktion stattdessen den Wert "undefined" zurück.
+
+function addGreeting(user) {
+  const greeting = "Greetings " + user;
+  return greeting;
+}
+const resultXhi = addGreeting("Saoirse");
+console.log(resultXhi);
+// Konsolenausgabe: Greetings Saoirse
+
+// ==============================
+// Funktion für die Rechnung
+// ==============================
+// Diese Funktion überprüft,
+// ob eine übergebene Zahl kleiner als 5 ist.
+// Sie gibt true oder false zurück.
+function lessThanFive(number) {
+  const lessThan = number < 5;
+
+  return lessThan;
+}
+const resultXXL = lessThanFive(10);
+console.log(resultXXL);
+// Konsolenausgabe: false
+
+function addTen(number) {
+  const addedTen = 10 + number;
+  return addedTen;
+}
+console.log(addTen(20));
+// Konsolenausgabe: 30
+// 10 + 20 = 30
+
+
+function displayCash() {
+  const money = 12030;
+  const currency = " Euros";
+  console.log(money + currency);
+}
+displayCash();
+// Konsolenausgabe: 12030 Euros
