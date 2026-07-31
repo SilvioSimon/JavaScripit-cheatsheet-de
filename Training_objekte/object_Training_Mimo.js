@@ -8,19 +8,13 @@ const cat = {
   name: "Garfield",
   favoriteFood: "Lasagna",
 };
-
 //statt das verwenden: const
 //name = "Garfield";
 //const favoriteFood = "Lasagna";
 
-const dog = {
-  name: "Odie",
-};
-
 // ==============================
 // Beispiel Obejekt für Person
 // ==============================
-
 const person = {
   name: "Joe Exotic",
   nickname: "Tiger King",
@@ -36,3 +30,33 @@ console.log(person.nickname);
 person.nickname = "Tiger Prince";
 console.log(person);
 // Eigenschaft eines Objekts ändern
+
+// ==============================
+// OBJECT METHOD – HUND BELLEN LASSEN
+// Erstellt ein Hund-Objekt mit einem Namen und einer Methode.
+// Die Methode `bark()` gibt den Laut "woof woof!" in der Konsole aus.
+// ==============================
+const dog = {
+  name: "Odie",
+  bark: function (word) {
+    console.log("woof woof!");
+
+    return "woof woof wooooof, " + word;
+  },
+};
+
+dog.bark(); // Konsolenausgabe: woof woof!
+console.log(dog.bark("hungry")); //Konsolenausgabe: woof woof, hungry
+
+// ==============================
+//Weitere Beispiel
+// ==============================
+const phone = {
+  brand: "Apple",
+  number: "555-555-5555",
+  ring: function () {
+    console.log("ding ding ding!");
+  },
+};
+phone.ring();
+// Konsolenausgabe: ding ding ding!
