@@ -145,3 +145,4 @@ function addTen(number) {
 console.log(addTen(20));
 // Konsolenausgabe: 30
 // 10 + 20 = 30
+
