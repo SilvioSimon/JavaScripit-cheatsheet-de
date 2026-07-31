@@ -12,6 +12,7 @@ const cat = {
 //name = "Garfield";
 //const favoriteFood = "Lasagna";
 
+
 // ==============================
 // Beispiel Obejekt für Person
 // ==============================
@@ -31,6 +32,7 @@ person.nickname = "Tiger Prince";
 console.log(person);
 // Eigenschaft eines Objekts ändern
 
+
 // ==============================
 // OBJECT METHOD – HUND BELLEN LASSEN
 // Erstellt ein Hund-Objekt mit einem Namen und einer Methode.
@@ -48,6 +50,7 @@ const dog = {
 dog.bark(); // Konsolenausgabe: woof woof!
 console.log(dog.bark("hungry")); //Konsolenausgabe: woof woof, hungry
 
+
 // ==============================
 //Weitere Beispiel
 // ==============================
@@ -60,3 +63,32 @@ const phone = {
 };
 phone.ring();
 // Konsolenausgabe: ding ding ding!
+
+
+// ==============================
+// OBJECT METHOD – THIS KEYWORD
+// ==============================
+const myCereal = {
+  name: "Trix",
+  display: function () {
+    console.log(this); //this --> aktuelle Objekt zuzugreifen.
+  },
+};
+myCereal.display();
+// Konsolenausgabe: { name: 'Trix', display: [Function: display] }
+
+
+// ==============================
+// OBJECT METHOD – Ein praktischerer Einsatz
+// ==============================
+const myCerealGo = {
+  name: "Trix",
+  price: 5.99,
+
+  display: function () {
+    console.log(this.name);
+    console.log(this.price);
+  },
+};
+
+myCerealGo.display();
