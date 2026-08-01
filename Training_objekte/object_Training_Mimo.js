@@ -12,7 +12,6 @@ const cat = {
 //name = "Garfield";
 //const favoriteFood = "Lasagna";
 
-
 // ==============================
 // Beispiel Obejekt für Person
 // ==============================
@@ -32,7 +31,6 @@ person.nickname = "Tiger Prince";
 console.log(person);
 // Eigenschaft eines Objekts ändern
 
-
 // ==============================
 // OBJECT METHOD – HUND BELLEN LASSEN
 // Erstellt ein Hund-Objekt mit einem Namen und einer Methode.
@@ -50,7 +48,6 @@ const dog = {
 dog.bark(); // Konsolenausgabe: woof woof!
 console.log(dog.bark("hungry")); //Konsolenausgabe: woof woof, hungry
 
-
 // ==============================
 //Weitere Beispiel
 // ==============================
@@ -64,7 +61,6 @@ const phone = {
 phone.ring();
 // Konsolenausgabe: ding ding ding!
 
-
 // ==============================
 // OBJECT METHOD – THIS KEYWORD
 // ==============================
@@ -76,7 +72,6 @@ const myCereal = {
 };
 myCereal.display();
 // Konsolenausgabe: { name: 'Trix', display: [Function: display] }
-
 
 // ==============================
 // OBJECT METHOD – Ein praktischerer Einsatz
@@ -92,3 +87,24 @@ const myCerealGo = {
 };
 
 myCerealGo.display();
+
+// ==============================
+// JSON - JavaScript-Objek & JSON umwandeln
+// ==============================¨
+// (JSON.stringify) JS-Objekt --> JSON-String umwandeln
+// (JSON.parse)     JSON-String --> JS-Objekt umwandeln
+
+const concert = {
+  band: "Super Carrots",
+  music: "Indie",
+};
+console.log(concert);
+console.log(JSON.stringify(concert));
+//Konsolenausgabe:
+//{ band: 'Super Carrots', music: 'Indie' }
+//{"band":"Super Carrots","music":"Indie"}
+
+const puppy = '{"name":"Rocko","age":1}';
+console.log(JSON.parse(puppy));
+//Konsolenausgabe: { name: 'Rocko', age: 1 }
+
