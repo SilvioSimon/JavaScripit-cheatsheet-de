@@ -108,3 +108,7 @@ const puppy = '{"name":"Rocko","age":1}';
 console.log(JSON.parse(puppy));
 //Konsolenausgabe: { name: 'Rocko', age: 1 }
 
+const jsonString = '{"sport": "soccer", "players": 11, "duration": 90}';
+const newObject = JSON.parse(jsonString);
+console.log(newObject.players);
+//Konsolenausgabe>: 11
