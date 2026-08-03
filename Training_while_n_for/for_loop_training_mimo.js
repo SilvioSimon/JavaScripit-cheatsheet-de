@@ -34,13 +34,12 @@ for (let i = 0; i < 4; i++) {
 -------------------
 */
 
-
 // ==============================
 // for schleife - Rückwärts
 // ==============================
 
 for (let i = 5; i > 0; i--) {
- console.log(i);
+  console.log(i);
 }
 //Konsolenausgabe
 /* 
@@ -52,9 +51,9 @@ for (let i = 5; i > 0; i--) {
 */
 
 for (let i = 5; i >= 0; i--) {
- console.log(i);
+  console.log(i);
 }
-//Um 0 beim Herunterzählen einzuschließen, 
+//Um 0 beim Herunterzählen einzuschließen,
 // verwenden wir >= anstelle von >
 //Konsolenausgabe
 /* 
@@ -66,11 +65,10 @@ for (let i = 5; i >= 0; i--) {
 0
 */
 
-
 function displayNumbers(message) {
- for (let i = 1; i <= 10; i++) {
-  console.log(i + message);
- }
+  for (let i = 1; i <= 10; i++) {
+    console.log(i + message);
+  }
 }
 
 displayNumbers(" ginger beers on the wall");
@@ -95,3 +93,27 @@ displayNumbers(" root beers on the wall");
 //8 root beers on the wall
 //9 root beers on the wall
 //10 root beers on the wall
+
+function drawVerticalLine() {
+  for (let i = 0; i < 3; i++) {
+    console.log("| Ls |");
+  }
+}
+drawVerticalLine();
+//Konsolenausgabe:
+// | Ls |
+// | Ls |
+// | Ls |
+
+function drawVerticalLine(times) {
+  for (let i = 0; i < times; i++) {
+    console.log("|");
+  }
+}
+drawVerticalLine(5);
+//Konsolenausgabe:
+// | 
+// | 
+// | 
+// | 
+// | 
