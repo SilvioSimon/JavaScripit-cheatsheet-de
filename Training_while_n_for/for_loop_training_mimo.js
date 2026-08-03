@@ -65,3 +65,33 @@ for (let i = 5; i >= 0; i--) {
 1 
 0
 */
+
+
+function displayNumbers(message) {
+ for (let i = 1; i <= 10; i++) {
+  console.log(i + message);
+ }
+}
+
+displayNumbers(" ginger beers on the wall");
+displayNumbers(" root beers on the wall");
+//1 ginger beers on the wall
+//2 ginger beers on the wall
+//3 ginger beers on the wall
+//4 ginger beers on the wall
+//5 ginger beers on the wall
+//6 ginger beers on the wall
+//7 ginger beers on the wall
+//8 ginger beers on the wall
+//9 ginger beers on the wall
+//10 ginger beers on the wall
+//1 root beers on the wall
+//2 root beers on the wall
+//3 root beers on the wall
+//4 root beers on the wall
+//5 root beers on the wall
+//6 root beers on the wall
+//7 root beers on the wall
+//8 root beers on the wall
+//9 root beers on the wall
+//10 root beers on the wall
