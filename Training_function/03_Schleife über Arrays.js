@@ -63,21 +63,20 @@ compareArrays(one, two);
 // Der ursprüngliche Preis im Array bleibt dabei unverändert.
 // =====================================
 {
-const prices = [99, 129, 149];
-const discount = 0.1;
+  const prices = [99, 129, 149];
+  const discount = 0.1;
 
-function applyDiscount(prices, discount) {
-  for (let i = 0; i < prices.length; i++) {
-    console.log(prices[i] * discount);
+  function applyDiscount(prices, discount) {
+    for (let i = 0; i < prices.length; i++) {
+      console.log(prices[i] * discount);
+    }
   }
+  applyDiscount(prices, discount);
 }
-applyDiscount(prices, discount);
-}
-//Konsolenausgabe: 
+//Konsolenausgabe:
 //9.9
 //12.9
 //14.9
-
 
 // =====================================
 // INDIVIDUELLE RABATTWERTE FÜR ARRAY-ELEMENTE BERECHNEN
@@ -118,3 +117,16 @@ displayHours(1, 24);
 // 3:00
 // ...
 // 24:00
+
+const fruits = ["apples", "bananas", "oranges"];
+
+function searchFruits(fruits, searchPhrase) {
+  const foundFruit = fruits.find((fruit) => fruit === searchPhrase);
+  if (foundFruit) {
+    console.log(searchPhrase + " are in the fruit basket!");
+  } else {
+    console.log("No such fruit in the fruit basket!");
+  }
+}
+
+searchFruits(fruits, "apples");
