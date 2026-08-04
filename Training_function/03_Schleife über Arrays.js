@@ -99,3 +99,22 @@ function getValues(prices, discounts) {
 getValues(prices, discounts);
 // Konsolenausgabe:
 // [9.9, 25.8, 37.25]
+
+// =====================================
+// STUNDENBEREICH MIT EINER SCHLEIFE AUSGEBEN
+// Durchläuft einen angegebenen Zeitbereich von Start bis Ende
+// mit einer `for`-Schleife und gibt jede Stunde im Format
+// "Stunde:00" in der Konsole aus.
+// =====================================
+function displayHours(start, end) {
+  for (let i = start; i <= end; i++) {
+    console.log(i + ":00");
+  }
+}
+displayHours(1, 24);
+// Konsolenausgabe:
+// 1:00
+// 2:00
+// 3:00
+// ...
+// 24:00
