@@ -341,3 +341,4 @@ getCookwareMaterials(cookwareMaterials);
 
 // Konsolenausgabe:
 // The bestSelling materials for the cookware at home are Stainless Steel and Copper.
+
