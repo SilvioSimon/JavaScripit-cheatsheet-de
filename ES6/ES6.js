@@ -113,3 +113,64 @@ const cost = `Total cost: ${quantity * price}`;
 console.log(cost);
 
 // Konsolenausgabe: Total cost: 200
+
+// ============================================================
+// 9. TAGGED TEMPLATE LITERALS
+// ============================================================
+const greetings = (name) => {
+  return `Bonjour ${name}!`;
+};
+console.log(greetings`Jane`);
+// Bei Tagged Template Literals können Backticks ``
+// anstelle von Klammern () verwendet werden.
+
+// Normaler Funktionsaufruf:
+// greetings('Jane')
+
+// Tagged Template Literal:
+// greetings`Jane`
+
+// ============================================================
+// 10. ARRAY DESTRUCTURING & CONDITIONALS
+// ============================================================
+const cars = [
+  "Honda",
+  "Volkswagen",
+  "Bentley",
+  "Cadillac",
+  "Toyota",
+  "Chevrolet",
+  "Nissan",
+  "Kia",
+];
+
+const [firstCar, secondCar] = cars;
+
+if (firstCar === "Hyundai") {
+  console.log("The prettiest car is a Hyundai");
+} else if (secondCar === "Jeep") {
+  console.log("The prettiest car is a Jeep");
+} else {
+  console.log(`${firstCar} cars are prettier than ${secondCar} cars.`);
+}
+
+// Konsolenausgabe:
+// Honda cars are prettier than Volkswagen cars.
+
+// ============================================================
+// 11. ARRAY DESTRUCTURING – REST OPERATOR
+// ============================================================
+
+const [companyName, ...anyOtherVariable] = [
+  "Leo Pizza",
+  "19873456789",
+  "911 SW Main St, Bunkie",
+];
+console.log(companyName);
+console.log(anyOtherVariable);
+// Konsolenausgabe:
+// Leo Pizza
+// ['19873456789', '911 SW Main St, Bunkie']
+
+// companyName → erhält das erste Element
+// ...anyOtherVariable → sammelt alle übrigen Elemente
