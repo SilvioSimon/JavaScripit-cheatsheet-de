@@ -174,3 +174,170 @@ console.log(anyOtherVariable);
 
 // companyName → erhält das erste Element
 // ...anyOtherVariable → sammelt alle übrigen Elemente
+
+
+
+// ============================================================
+// 12. ARRAY DESTRUCTURING – ELEMENT ÜBERSPRINGEN
+// ============================================================
+
+// Kommas innerhalb von [] überspringen Elemente.
+// Hier werden die ersten beiden Elemente übersprungen.
+// Das dritte Element wird in address gespeichert.
+
+const [, , address] = [
+    'Leo Pizza',
+    '19873456789',
+    '911 SW Main St, Bunkie',
+];
+
+console.log(address);
+
+// Konsolenausgabe:
+// 911 SW Main St, Bunkie
+
+
+
+// ============================================================
+// 13. ARRAY DESTRUCTURING – ELEMENTE ÜBERSPRINGEN
+// ============================================================
+
+// Das erste, zweite und vierte Element werden extrahiert.
+// Das dritte Element ('Purple') wird übersprungen.
+
+const [id, userName, , favoriteFruit] = [
+    '0015',
+    'Ben Anderson',
+    'Purple',
+    'Apple',
+    'Soccer',
+];
+
+console.log(id);
+console.log(userName);
+console.log(favoriteFruit);
+
+// Konsolenausgabe:
+// 0015
+// Ben Anderson
+// Apple
+
+
+// ============================================================
+// 14. OBJECT DESTRUCTURING – VARIABLEN UMBENENNEN
+// ============================================================
+
+// Mit "Eigenschaft: neuerVariablenname" kann eine Eigenschaft
+// beim Destructuring unter einem anderen Variablennamen
+// gespeichert werden.
+
+const carInformation = {
+    item1: 'Mazda',
+    item2: 'cx30',
+    item3: 'red',
+};
+
+const {
+    item1: brand,
+    item2: model,
+    item3: color,
+} = carInformation;
+
+console.log(brand);
+console.log(model);
+console.log(color);
+
+// Konsolenausgabe:
+// Mazda
+// cx30
+// red
+
+// ============================================================
+// 15. OBJECT DESTRUCTURING – REST OPERATOR
+// ============================================================
+
+// firstName und lastName werden einzeln extrahiert.
+// ...otherInfo sammelt alle übrigen Eigenschaften.
+
+const userInformation = {
+    firstName: 'John',
+    lastName: 'Smith',
+    age: 41,
+    phoneNumber: '19200202342',
+};
+
+const {
+    firstName,
+    lastName,
+    ...otherInfo
+} = userInformation;
+
+console.log(firstName);
+console.log(lastName);
+console.log(otherInfo);
+
+// Konsolenausgabe:
+// John
+// Smith
+// { age: 41, phoneNumber: '19200202342' }
+
+// ============================================================
+// ES5 vs. ES6 – OBJECT DESTRUCTURING
+// ============================================================
+
+// Vor ES6 (ES5):
+// Eigenschaften mussten einzeln über den Objektnamen
+// angesprochen und Variablen zugewiesen werden.
+
+var carInformationES5 = {
+    item1: 'Mazda',
+    item2: 'cx30',
+    item3: 'red',
+};
+
+var brandES5 = carInformationES5.item1;
+var modelES5 = carInformationES5.item2;
+var colorES5 = carInformationES5.item3;
+
+
+// Ab ES6:
+// Object Destructuring ermöglicht eine kürzere Schreibweise.
+
+const carInformationES6 = {
+    item1: 'Mazda',
+    item2: 'cx30',
+    item3: 'red',
+};
+
+const {
+    item1: brandES6,
+    item2: modelES6,
+    item3: colorES6,
+} = carInformationES6;
+
+// ============================================================
+// 16. FUNCTION – ARRAY DESTRUCTURING IN PARAMETERN
+// ============================================================
+
+// Ein Array kann direkt im Funktionsparameter destrukturiert werden.
+// [first, second] übernimmt das erste und zweite Element.
+// Die weiteren Elemente des Arrays werden nicht verwendet.
+
+const cookwareMaterials = [
+    'Stainless Steel',
+    'Copper',
+    'Aluminum',
+    'Carbon Steel',
+    'Cast Iron',
+];
+
+function getCookwareMaterials([first, second]) {
+    console.log(
+        `The bestSelling materials for the cookware at home are ${first} and ${second}.`
+    );
+}
+
+getCookwareMaterials(cookwareMaterials);
+
+// Konsolenausgabe:
+// The bestSelling materials for the cookware at home are Stainless Steel and Copper.
