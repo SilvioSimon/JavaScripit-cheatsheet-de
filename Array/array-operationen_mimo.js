@@ -91,16 +91,22 @@ for (const element of testScores) {
 }
 console.log(arr); //[ 95, 90 ]
 
+//alternative: vereinfachte version
+{
+  const testScores = [72, 95, 90, 71, 75, 79];
+  const arr = testScores.filter((element) => element >= 90);
+  console.log(arr);
+}
+
 // ============================================================
 // 22. FILTER() – NAMEN MIT S HERAUSFILTERN
 // ============================================================
 
 const participants = ["Ben", "Sarah", "Eli", "Henry", "Sean", "Annabel"];
-const sNames = participants.filter(function(element) {
-    return element[0] === "S"; // element[0] => erstes Zeichen
+const sNames = participants.filter(function (element) {
+  return element[0] === "S"; // element[0] => erstes Zeichen
 });
 console.log(sNames); //["Sarah", "Sean"]
-
 
 // ============================================================
 // 23. FILTER() – WOCHENTAGE OHNE WOCHENENDE
@@ -108,10 +114,64 @@ console.log(sNames); //["Sarah", "Sean"]
 // filter() prüft jedes Element und übernimmt nur die Werte,
 // bei denen die Bedingung true ist.
 // index > 0 und index < 6 schließt Sunday (0) und Saturday (6) aus.
-const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const workWeek = week.filter(function(element, 
-index
-) {
- return (index > 0 && index < 6); //&& bedeutet UND 
+const week = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const workWeek = week.filter(function (element, index) {
+  return index > 0 && index < 6; //&& bedeutet UND
 });
 console.log(workWeek); // Konsolenausgabe: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+// ============================================================
+// 25. FILTER() – TOP 3 PLATZIERUNGEN HERAUSFILTERN
+// ============================================================
+const finishers = ["Sarah", "Sally", "Jake", "Alex", "Tori"];
+const top3 = finishers.filter(function (finisher, place) {
+  return place < 3; //(Index 0–2)
+});
+console.log(top3); // Konsolenausgabe:["Sarah", "Sally", "Jake"]
+
+//alternative: vereinfachte version
+{
+  const finishers = ["Sarah", "Sally", "Jake", "Alex", "Tori"];
+  const top3 = finishers.filter((finisher, place) => place < 3);
+  console.log(top3);
+}
+
+// ============================================================
+// 26. FOR...OF – GESAMTSUMME DER MEILEN BERECHNEN
+// ============================================================
+// += zur Variable zusammen addiert.
+
+const miles = [33, 95, 79];
+let total = 0;
+for (const element of miles) {
+  total += element; //33 + 95 + 79
+}
+console.log(total); // Konsolenausgabe: 207
+
+
+//alternativ
+// reduziert sie auf einen einzigen Wert.
+// prev = bisheriger Gesamtwert
+// curr = aktuelles Element
+{
+  const miles = [33, 95, 79];
+  const total = miles.reduce(function (prev, curr) {
+    return prev + curr;
+  });
+  console.log(total);
+}
+
+//alternativ (oder)
+{
+    const miles = [33, 95, 79];
+    const total = miles.reduce((prevVal, currVal) => prevVal + currVal);
+    console.log(total);
+}
