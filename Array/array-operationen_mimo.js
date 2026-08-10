@@ -1,3 +1,8 @@
+//.map()	= Jedes Element umwandeln	                 --> Neues Array
+//.filter()	= Bestimmte Elemente auswählen	             --> Neues Array
+//.reduce()	= Alle Elemente zu einem Wert zusammenfassen --> Ein Wert
+
+
 // ============================================================
 // 17. FOR...OF – FAHRENHEIT IN CELSIUS UMRECHNEN
 // ============================================================
@@ -156,7 +161,6 @@ for (const element of miles) {
 }
 console.log(total); // Konsolenausgabe: 207
 
-
 //alternativ
 // reduziert sie auf einen einzigen Wert.
 // prev = bisheriger Gesamtwert
@@ -171,7 +175,38 @@ console.log(total); // Konsolenausgabe: 207
 
 //alternativ (oder)
 {
-    const miles = [33, 95, 79];
-    const total = miles.reduce((prevVal, currVal) => prevVal + currVal);
-    console.log(total);
+  const miles = [33, 95, 79];
+  const total = miles.reduce((prevVal, currVal) => prevVal + currVal);
+  console.log(total);
 }
+
+// ============================================================
+// 27. REDUCE() – GESAMTPREIS MIT RABATT BERECHNEN
+// ============================================================
+// reduce() berechnet aus allen Preisen einen Gesamtwert.
+// currVal = aktueller Preis
+// index = Position des aktuellen Preises
+// discountFactor[index] = passender Rabattfaktor
+//
+// Beispiel:
+// 17.5 * 0.9 = 15.75
+// Der reduzierte Preis wird anschließend zur Gesamtsumme addiert.
+const pricesX = [17.5, 20.25, 24.75, 13.5, 8.5];
+const discountFactor = [0.9, 0.9, 1.0, 1.0, 0.9];
+const totalX = pricesX.reduce(function (prevVal, currVal, index) {
+  return prevVal + currVal * discountFactor[index];
+});
+console.log(totalX); // Konsolenausgabe: 80.575
+
+// ============================================================
+// 28. REDUCE() – WÖRTER ZU EINEM SATZ VERBINDEN
+// ============================================================
+// reduce() verbindet alle Wörter des Arrays zu einem einzigen String.
+// prev = bisheriger Satz
+// curr = aktuelles Wort
+// " " fügt zwischen den Wörtern ein Leerzeichen ein.
+const words = ["The", "house", "is", "red"];
+const sentence = words.reduce(function (prev, curr) {
+  return prev + " " + curr;
+});
+console.log(sentence);// Konsolenausgabe: "The house is red"
