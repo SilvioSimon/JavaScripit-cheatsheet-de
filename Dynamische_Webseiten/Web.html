@@ -1,19 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web</title>
-</head>
-<body>
+    <style>
+      body {
+        background: black;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="window.location.href = '../index.html'">Main Page</button>
 
-    <button onclick="window.location.href='../index.html'">
-        Main Page
-    </button>
-    
+    <h1>Secret Message</h1>
+    <button onclick="show()">Show secret</button>
+    <p id="secret">****************</p>
 
     <script src="./web.js"></script>
-
-    
-</body>
+  </body>
 </html>
