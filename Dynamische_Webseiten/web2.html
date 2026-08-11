@@ -8,11 +8,80 @@
   <body>
     <button onclick="window.location.href = '../index.html'">Main Page</button>
 
+    <!-- ========================================= 
+      EXERCISE 1: Get Input Value
+     ========================================= -->
     <input id="usernameInput" type="text" placeholder="Username" />
     <button onclick="register()">Register</button>
     <p id="message"></p>
     <script>
       const username = document.getElementById("usernameInput").value;
     </script>
+
+    <!-- ========================================= 
+     EXERCISE 2: Display Input Value
+     ========================================= -->
+    <input id="usernameInput2" type="text" placeholder="Username2" />
+    <button onclick="register()">Register</button>
+    <p id="message2"></p>
+    <script>
+      function register() {
+        const paragraph2 = document.getElementById("message2");
+        const username2 = document.getElementById("usernameInput2").value;
+
+        paragraph2.innerHTML = username2 + ", you're signed up!";
+      }
+    </script>
+    <!-- OUTPUT: If the user enters: Zuki The page displays: Zuki, you're signed up! -->
+
+    <!-- ========================================= 
+     EXERCISE 3: Share a Post 
+     ========================================= 
+     Function: Get text from a textarea and display it on the page after 
+     clicking "Share". JavaScript concepts: 
+     - querySelector() 
+     - getElementById() 
+     - .value 
+     - .innerHTML
+      ========================================= -->
+    <img id="profilePic" src="https://mimo.app/i/hacker.png" height="45" />
+    <textarea
+      id="postText"
+      rows="3"
+      cols="18"
+      placeholder="What's on your mind?"
+    ></textarea>
+    <br />
+    <button onclick="share()">Share</button>
+    <p></p>
+    <script src="script.js"></script>
   </body>
+  <script>
+    function share() {
+      const text = document.querySelector("p");
+      const post = document.getElementById("postText").value;
+      text.innerHTML = post;
+    }
+  </script>
+
+  <!-- ========================================= 
+     EXERCISE 4: Add Customer Review
+     ========================================= -->
+  <h1>Customer Reviews</h1>
+  <textarea
+    id="reviewText"
+    rows="5"
+    cols="18"
+    placeholder="Write your review here"
+  ></textarea>
+  <br />
+  <button onclick="addReview()">Add Review</button>
+  <p id="addedReview"></p>
+  <script>
+    function addReview() {
+      const review = document.getElementById("reviewText").value;
+      const addedReview = document.getElementById("addedReview");
+      addedReview.innerHTML = review;
+    }
+  </script>
 </html>
