@@ -7,7 +7,7 @@
     <style>
       body {
         background: black;
-        color: red;
+        color: rgb(231, 170, 170);
       }
     </style>
   </head>
@@ -17,6 +17,71 @@
     <h1>Secret Message</h1>
     <button onclick="show()">Show secret</button>
     <p id="secret">****************</p>
+
+    <ul>
+      <li class="important">call grandma</li>
+      <li class="important overdue">buy milk</li>
+      <li class="important today">workout</li>
+    </ul>
+    <button onclick="displayItem()">Display item</button>
+    <p></p>
+    <script>
+      function displayItem() {
+        const el = document.getElementsByClassName("important overdue");
+        const paragraph = document.getElementsByTagName("p");
+        paragraph[0].innerHTML = el[0].innerHTML;
+      }
+    </script>
+
+    <br />
+    <h3>RallyRaces</h3>
+    <p id="paragraph"></p>
+    <script>
+      const player1 = "Riley";
+      const player2 = "Reese";
+      const paragraph = document.getElementById("paragraph");
+      paragraph.innerHTML = player1 + " VS " + player2;
+    </script>
+
+    <br />
+
+    <h1 id="newspaper">The Economist</h1>
+    <button onclick="read()">Read</button>
+    <h2 id="about"></h2>
+    <script>
+      function read() {
+        document.getElementById("about").innerHTML =
+          "You've seen the news, why not discover the story?";
+      }
+    </script>
+
+    <br />
+
+    <h3>This week on HomeFlix</h3>
+    <h4 class="thriller">The Spy that Knew too Much</h4>
+    <h4 class="adventure">Batman Returns</h4>
+    <h4 class="adventure">The Dark Knight</h4>
+    <button onclick="updateHeadings()">Update Movies</button>
+    <script>
+      function updateHeadings() {
+        const el = document.getElementsByClassName("adventure");
+        el[1].innerHTML = "Dawn of Justice";
+      }
+    </script>
+
+    <!-- querySelectorAll() wählt alle passenden Elemente aus -->
+    <h3 class="movie gossip">Oscar Nominations Drama</h3>
+    <h3 class="sports news">The Next Olympic Sport?</h3>
+    <h3 class="tech news">The New Y-Phone</h3>
+    <button onclick="displayItems()">Display number of news headings</button>
+    <p></p>
+    <script>
+      function displayItems() {
+        const ele = document.querySelectorAll(".sports.news");
+        const paragraphX = document.querySelectorAll("p");
+        paragraphX[0].innerHTML = ele[0].innerHTML;
+      }
+    </script>
 
     <script src="./web.js"></script>
   </body>
