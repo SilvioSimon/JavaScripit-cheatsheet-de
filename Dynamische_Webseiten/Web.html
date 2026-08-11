@@ -18,6 +18,9 @@
     <button onclick="show()">Show secret</button>
     <p id="secret">****************</p>
 
+    <!-- ========================================= 
+     getElementsByClassName() example 
+    ========================================= -->
     <ul>
       <li class="important">call grandma</li>
       <li class="important overdue">buy milk</li>
@@ -25,6 +28,7 @@
     </ul>
     <button onclick="displayItem()">Display item</button>
     <p></p>
+    <!-- OUTPUT: buy milk-->
     <script>
       function displayItem() {
         const el = document.getElementsByClassName("important overdue");
@@ -34,6 +38,10 @@
     </script>
 
     <br />
+
+    <!-- ========================================= 
+     getElementById() and innerHTML example 
+     ========================================= -->
     <h3>RallyRaces</h3>
     <p id="paragraph"></p>
     <script>
@@ -42,9 +50,13 @@
       const paragraph = document.getElementById("paragraph");
       paragraph.innerHTML = player1 + " VS " + player2;
     </script>
+    <!-- OUTPUT: Riley VS Reese -->
 
     <br />
 
+    <!-- ========================================= 
+     getElementById() with a button 
+     ========================================= -->
     <h1 id="newspaper">The Economist</h1>
     <button onclick="read()">Read</button>
     <h2 id="about"></h2>
@@ -54,9 +66,12 @@
           "You've seen the news, why not discover the story?";
       }
     </script>
+    <!-- OUTPUT: You've seen the news, why not discover the story? -->
 
     <br />
-
+    <!-- ========================================= 
+     getElementsByClassName() example 
+     ========================================= -->
     <h3>This week on HomeFlix</h3>
     <h4 class="thriller">The Spy that Knew too Much</h4>
     <h4 class="adventure">Batman Returns</h4>
@@ -68,7 +83,15 @@
         el[1].innerHTML = "Dawn of Justice";
       }
     </script>
+    <!-- OUTPUT: Before clicking: 
+     Batman Returns The Dark Knight After clicking 
+     "Update Movies": Batman Returns Dawn of Justice -->
 
+<br>
+
+    <!-- ========================================= 
+     querySelectorAll() example 
+     ========================================= -->
     <!-- querySelectorAll() wählt alle passenden Elemente aus -->
     <h3 class="movie gossip">Oscar Nominations Drama</h3>
     <h3 class="sports news">The Next Olympic Sport?</h3>
@@ -81,7 +104,7 @@
         const paragraphX = document.querySelectorAll("p");
         paragraphX[0].innerHTML = ele[0].innerHTML;
       }
-    </script>
+    </script><!-- OUTPUT: The Next Olympic Sport? -->
 
     <script src="./web.js"></script>
   </body>
