@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <button onclick="window.location.href = '../index.html'">Main Page</button>
+    <!-- ========================================= 
+    changeAttribute
+     ========================================= -->
+    <button onclick="changeAttribute()">Change Attribute</button>
+    <br />
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmDTWXt7L0swOpt7kboNCY2oHhTnYPUyoR3OBAomVogw&s=10"
+      alt="Profile Photo"
+    />
+    <p></p>
+
+    <script>
+      function changeAttribute() {
+        const el = document.querySelector("img");
+        el.width = 600;
+        el.src =
+          "https://media.4-paws.org/a/5/c/4/a5c4c9cdfd3a8ecb58e9b1a5bd496c9dfbc3cedc/VIER%20PFOTEN_2020-10-07_00132-2890x2000-1920x1329.jpg";
+        //change new pic
+      }
+    </script>
+
+    <!-- ========================================= 
+     changeQuestionType
+     ========================================= -->
+    <button onclick="changeQuestionType()">Change Survey Option</button>
+    <p>Submit answer</p>
+    <input type="range" />
+    <script>
+      function changeQuestionType() {
+        const el = document.querySelector("input");
+        el.type = "checkbox";
+      }
+    </script>
+    <br />
+
+    <!-- ========================================= 
+     Updtate Style.css 
+     ========================================= -->
+    <button onclick="addStyleSheet()">Update website design</button>
+    <br />
+    <img src="https://mimo.app/r/forest.png" />
+    <link rel="stylesheet" href="" />
+
+    <script>
+      function addStyleSheet() {
+        const el = document.querySelector("link");
+        el.href = "style.css"; //Add href--> css file
+      }
+    </script>
+
+    <!-- ========================================= 
+     Type-Attribut des input-Elements
+     ========================================= -->
+    <p>Enter new password</p>
+    <input id="passwordInput" type="range" />
+
+    <script>
+      const el = document.querySelector("#passwordInput");
+      el.type = "password";
+    </script>
+  </body>
+</html>
