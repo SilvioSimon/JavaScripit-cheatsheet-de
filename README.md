@@ -1,4 +1,4 @@
-﻿# JavaScript Grundbegriffe
+# JavaScript Grundbegriffe
 
 Eine kurze Übersicht der wichtigsten Begriffe – mit besonderem Fokus auf **Variable** und **Element**, da diese am häufigsten durcheinandergehen.
 
@@ -92,6 +92,24 @@ Variable                    HTML-Element
 ```
 
 👉 `element` als Variablenname (z. B. `let element = ...`) ist **kein** Befehl, sondern einfach ein gewählter Name – wie jeder andere auch.
+
+### `querySelector()` und die Zeichen `#` / `.`
+
+`querySelector()` findet HTML-Elemente über CSS-Selektor-Syntax:
+
+| Selektor | Sucht nach | Beispiel |
+|---|---|---|
+| `"p"` | Tag-Name | `<p>` |
+| `".klasse"` | Klasse (Punkt `.`) | `<div class="klasse">` |
+| `"#id"` | ID (Raute `#`) | `<div id="id">` |
+
+```js
+let button = document.querySelector("button"); // Tag
+let box    = document.querySelector(".box");    // Klasse .
+let status = document.querySelector("#status"); // ID #
+```
+
+Das `#` sagt JavaScript also: „Suche nicht nach einem Tag oder einer Klasse, sondern nach dem Element mit genau dieser **ID**." Ohne `#` würde nach einem Tag namens `<status>` gesucht – das gibt es nicht, und das Ergebnis wäre `null`.
 
 ## 5. Weitere Begriffe (kurz)
 
