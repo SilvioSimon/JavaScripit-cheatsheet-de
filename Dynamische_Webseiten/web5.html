@@ -5,21 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <button onclick="window.location.href = '../index.html'">Main Page</button>
+
     <br />
     <br />
+
+    <!-- =========================================
+         Change Color
+    ========================================= -->
 
     <button onclick="changeColor()">Change Color</button>
-<p>Spygame III - Coming January</p>
 
-<script>
-  function changeColor() {
-    const el = document.querySelector("p");
+    <p id="colorResult">Spygame III - Coming January</p>
 
-    el.style.color = "#71919f";
-    el.style.backgroundColor = "#112f";
-    el.style.borderRadius= "45px";
-  }
-</script>
+    <script>
+      function changeColor() {
+        const el = document.querySelector("#colorResult");
+
+        el.style.color = "#71919f";
+        el.style.backgroundColor = "#112f";
+        el.style.borderRadius = "45px";
+      }
+    </script>
+
+    <!-- =========================================
+         Display Attribute
+    ========================================= -->
+
+    <button onclick="displayAttribute()">Display Attribute</button>
+
+    <br />
+
+    <img id="catImage" src="https://mimo.app/r/cat.png" alt="Cat" />
+
+    <p id="attributeResult"></p>
+
+    <!-- =========================================
+         Display Style
+    ========================================= -->
+    <button onclick="displayStyle()">Display Style</button>
+    <br />
+    <a
+      id="aboutMe"
+      style="color: teal; font-weight: bold"
+      href="https://instagram.com/"
+      >About Me</a
+    >
+    <p id="styleResult"></p>
+
+    <script src="script.js"></script>
+
+    <!-- =========================================
+         .setAttribute ("placeholder", "1234")
+    ========================================= -->
+    <button onclick="updateElement()">Add placeholder</button>
+    <br />
+    <input type="password" />
+    <script src="script.js"></script>
+    <script>
+      function updateElement() {
+        const el = document.querySelector("input");
+        el.setAttribute("placeholder", "1234");
+      }
+    </script>
+  </body>
 </html>

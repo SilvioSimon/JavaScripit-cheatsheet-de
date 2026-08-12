@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .italic {
+        font-style: italic;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      body {
+        text-align: center;
+      }
+      button {
+        margin: 30px;
+        padding: 3px 12px 3px 12px;
+        border-radius: 20px;
+        font-weight: bold;
+        border: 0px solid;
+        outline: none;
+        background-color: #d9e8fb;
+        color: #4d4d87;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button onclick="window.location.href = '../index.html'">Main Page</button>
+    <br />
+    <br />
+
+    <button onclick="addBold()">Bold</button>
+    <br />
+    <p class="italic">
+      It was a bright cold day in April, and the clocks were striking thirteen.
+    </p>
+    <script>
+              function addBold() {
+       const el = document.querySelector("p");
+       el.classList.toggle("bold"); //kann auch (.remove & .add)
+       //setAttribute() überschreibt die Klassen des Elements, 
+       // während classList dies nicht tut
+      }
+    </script>
+  </body>
+</html>
