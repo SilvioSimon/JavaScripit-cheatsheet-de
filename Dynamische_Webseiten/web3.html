@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button onclick="window.location.href = '../index.html'">Main Page</button>
+
+    <!-- =========================================
+         getElementsByTagName() example
+    ========================================= -->
+    <ul>
+      <li>Michael</li>
+      <li>Jonas</li>
+      <li>Ellen</li>
+    </ul>
+
+    <button onclick="displayItem()">Display length</button>
+
+    <div></div>
+
+    <script>
+      function displayItem() {
+        const el = document.getElementsByTagName("li");
+        // Sucht alle <li>-Elemente im HTML-Dokument und speichert sie in "el".
+
+        const div = document.querySelector("div");
+
+        div.innerText = `Anzahl: ${el.length}`;
+        // Gibt die Anzahl der <li>-Elemente aus.
+
+        div.innerText += "\n" + el[1].innerHTML;
+        // \n --> Zeilenumbruch
+        // el[1] --> zweites <li>-Element
+        // Output: Jonas
+      }
+    </script>
+
+    <!-- =========================================
+         getElementsByClassName() example
+    ========================================= -->
+    <ul>
+      <li class="urgent">buy milk</li>
+      <li class="urgent">call grandma</li>
+      <li>workout</li>
+    </ul>
+    <button onclick="displayItem2()">Display urgent tasks</button>
+    <p></p>
+
+    <script>
+      function displayItem2() {
+        const el = document.getElementsByClassName("urgent");
+        // Sucht alle Elemente mit der Klasse "urgent".
+        const p = document.querySelector("p");
+        p.innerText = "You have " + el.length + " urgent tasks";
+        // Gibt die Anzahl der dringenden Aufgaben aus.
+      }
+    </script>
+
+    <!-- =========================================
+        querySelectorAll() example
+    ========================================= -->
+    <h3>Breaking news</h3>
+    <h3>The Next Olympic Sport?</h3>
+    <h3>The New Y-Phone</h3>
+    <button onclick="displayHeading()">Display the third heading</button>
+
+    <p id="headingResult"></p>
+
+    <script>
+      function displayHeading() {
+        const el = document.querySelectorAll("h3");
+        // Sucht alle <h3>-Elemente.
+
+        const p = document.querySelector("#headingResult");
+
+        p.innerText = el[2].innerHTML;
+        // el[2] = drittes <h3>-Element
+      }
+    </script>
+  </body>
+</html>
