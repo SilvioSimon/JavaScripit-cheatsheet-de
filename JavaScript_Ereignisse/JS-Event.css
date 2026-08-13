@@ -17,3 +17,36 @@
 .mono {
   font-family: monospace;
 }
+
+/* =========================
+   ========================= */
+
+.item2 {
+ background-color: skyBlue;
+ height: 100px;
+ padding: 20px;
+}
+
+.pink {
+ background-color: pink;
+}
+
+/* =========================
+addEventListener()
+   ========================= */
+
+.default {
+ text-align: center;
+ background-color: skyBlue;
+ height: 100px;
+ width: 50%;
+ margin: 20px;
+}
+
+.width {
+ width: 80%;
+}
+
+.height {
+ height: 200px;
+}
