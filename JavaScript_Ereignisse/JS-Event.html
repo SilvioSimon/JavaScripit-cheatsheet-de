@@ -1,19 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS-Event</title>
-</head>
-<body>
+    <link rel="stylesheet" href="JS-Event.css" />
+  </head>
+  <body>
+    <button onclick="window.location.href = '../index.html'">Main Page</button>
 
-    <button onclick="window.location.href='../index.html'">
-        Main Page
-    </button>
+    <br /><br />
+<!--
+    <button>Publish website</button>
+    <p id="prompt"></p>
+    <script src="JS-Bessere_Event.js"></script>
+-->
     
+    <div id="buttons">
+    <!--Version 1: veraltet und schwieriger zu verwalten, wenn es um größere Codeabschnitte geht-->
+    <div id="buttons">
+      <div class="row">
+        <button onclick="toggleBold()">Bold</button>
+        <button onclick="toggleItalic()">Italic</button>
+      </div>
 
+      <div class="row">
+        <button onclick="toggleUnderline()">Underline</button>
+        <button onclick="toggleMonospace()">Monospace</button>
+      </div>
 
+      <br />
 
-    
-</body>
+      <div class="row">
+        <button onclick="removeFormat()">Remove Format</button>
+      </div>
+    </div>
+    <!--Warum sind Ereignisattribute nicht ideal zu verwenden?-->
+    <!--Sie sind veraltet und machen den Code schwerer lesbar!!!-->
+    <br />
+
+    <p>
+      It was a bright cold day in April, and the clocks were striking thirteen.
+    </p>
+
+    <script src="JS-Event_veraltet.js"></script>
+  </body>
 </html>
