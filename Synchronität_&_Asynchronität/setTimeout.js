@@ -1,4 +1,4 @@
-//setTimeout()-Methode ist eine asynchrone JavaScript-Methode (ausführenwie setTimeout() und setInterval().)
+//setTimeout()-Methode ist eine asynchrone JavaScript-Methode
 
 ///////////////////////////////////////////////////////////////
 // Asynchroner Code – setTimeout() und Code verzögert ausführen
@@ -8,7 +8,6 @@ setTimeout(() => {
   console.log("Executed Last"); //console letzte ausführung
 }, 2000); //2000 milisekunde verzögerung
 console.log("Executed Second");
-
 
 ///////////////////////////////////////////////////////////////
 // setTimeout(0) – Callback wird trotzdem später ausgeführt
@@ -22,7 +21,6 @@ setTimeout(() => {
 }, 0);
 console.log("Executed Zweite");
 
-
 ///////////////////////////////////////////////////////////////
 // setTimeout() – Callback verzögert ausführen
 ///////////////////////////////////////////////////////////////
@@ -31,7 +29,6 @@ console.log("Executed Zweite");
 function callback() {
   console.log("Executed Last because of setTimeout");
 }
-
 // Wird sofort ausgeführt.
 console.log("Executed First");
 
@@ -39,6 +36,31 @@ console.log("Executed First");
 // 2000 Millisekunden = 2 Sekunden Verzögerung.
 // Danach wird callback() ausgeführt.
 setTimeout(callback, 2000);
-
 // Wird sofort ausgeführt – bevor der Callback fertig ist.
 console.log("Executed Second");
+
+
+
+///////////////////////////////////////////////////////////////
+// setInterval() – Funktion regelmäßig wiederholen
+///////////////////////////////////////////////////////////////
+//setInterval() bedeutet:
+//Führe eine Funktion immer wieder nach einem bestimmten Zeitintervall aus.
+let blinkerOn = false;
+
+const toggleBlinker = () => {
+  if (blinkerOn) {
+    console.log("Blinker off");
+    blinkerOn = false;
+  } else {
+    console.log("Blinker on");
+    blinkerOn = true;
+  }
+};
+
+setInterval(toggleBlinker, 1000);
+//1 Sekunde → Blinker on
+//1 Sekunde → Blinker off
+//1 Sekunde → Blinker on
+//1 Sekunde → Blinker off
+//usw.
